@@ -14,12 +14,13 @@ Tabla de multiplicación desde 1 hasta 8:
 */
 
 #include <stdio.h>
+#define uno 1
+
 int main ()
 {
     int N;
     printf("Introduzca un numero \n");
     scanf("%d", &N);
-    int uno =1;
   for (int i=1; i<=N; i++){
 
       printf (" %dx1 = %d," ,i , uno*i);
