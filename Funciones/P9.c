@@ -2,7 +2,6 @@
 P9. Las computadoras están jugando un papel creciente en la educación. Escriba un programa que ayudaría a un alumno de
 escuela primaria a aprender a multiplicar. Utilice rand() para producir dos enteros positivos de un dígito. A continuación
 debería imprimir una pregunta coma la siguiente:
-
 ¿Cuánto es 6 veces 7?
 A continuación el alumno escribe la respuesta. Su programa verifica la respuesta del alumno. Si es correcta imprime "Muy
 bien!" y a continuación solicita otra multiplicación. Si la respuesta es incorrecta imprimirá "No. Por favor intenta
@@ -15,43 +14,55 @@ al final la conteste correctamente. El programa debe indicarle al alumno una for
 #include <ctype.h>
 
 //Declaracion De Funciones
-int answerQuestion(int divisor, int dividendo);
+int answerQuestion(int a, int b);
+int asignarNumero();
 time_t t;
 
-
 int main () {
-
    int repeat = 0;
-   int a, b;
+   int a, b, answer; //numeros multiplicandos
+   int bandera = 0; 
    srand((unsigned) time(&t)); // Inicializada una sola vez
 
    //Empieza Programa
    do {
-       a = ((rand()% 9) + 1); // rango entre 1 y 9
-       b = ((rand()% 9) + 1); // rango entre 1 y 9
-
-
-
-       /*
-       if () {
-
-       } else {
-           //contestar pregunta metodo
-           printf("No. Por favor intentanuevamente");
+       
+       // Asignar Numeros
+       if (bandera == 0) {
+           a = asignarNumero();
+           b = asignarNumero();
        }
-       */
+       
+       //Realizar Pregunta
+       printf("¿Cuánto es %d veces %d?: ", a, b);
+       scanf("%d", &answer);
 
-
-       printf("Desea Volver A Responder Otra Pregunta: \n");
-       printf("Presione 0 para si, Numero >0 para no: ");
-       scanf("%d", &repeat);
+       if (answerQuestion(a, b) == answer) {
+           printf("Muy Bien!\n");
+           bandera = 0;
+       } else {
+           printf("No. Por favor intentanuevamente\n");
+           bandera = 1;
+       }
+       
+       if (bandera == 0) {
+           printf("Desea Volver A Responder Otra Pregunta: \n");
+           printf("Presione 0 para si, Cualquier Numero > 0 para no: \n");
+           scanf("%d", &repeat);
+       }
    } while(repeat == 0);
-
+   printf("Hasta Luego...");
    return 0;
 }
 
 
-int answerQuestion(int divisor, int dividendo) {
-    int answer = (dividendo / divisor);
+int answerQuestion(int a, int b) {
+    int answer = (a * b);
     return answer;
 }
+
+int asignarNumero() {
+    int numero = ((rand()% 9) + 1); // rango entre 1 y 9
+    return numero;
+}
+
