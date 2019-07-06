@@ -22,14 +22,13 @@ time_t t;
 int main () {
 
    int repeat = 0;
-   int divisor, dividendo;
+   int a, b;
    srand((unsigned) time(&t)); // Inicializada una sola vez
 
-   //Empieza El Cuestionario
-
+   //Empieza Programa
    do {
-       divisor = ((rand()% 10) + 1); // rango entre 1 y 10
-       dividendo = ((rand()% 101) + divisor); // rango entre 1 y 10
+       a = ((rand()% 9) + 1); // rango entre 1 y 9
+       b = ((rand()% 9) + 1); // rango entre 1 y 9
 
 
 
@@ -38,13 +37,9 @@ int main () {
 
        } else {
            //contestar pregunta metodo
-
+           printf("No. Por favor intentanuevamente");
        }
        */
-
-       int div;
-       div = dividendo;
-       printf ("%d \n", div);
 
 
        printf("Desea Volver A Responder Otra Pregunta: \n");
