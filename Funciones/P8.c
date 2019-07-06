@@ -26,10 +26,10 @@ time_t t;
 int main()
 {
     int tiros, contc=0, conts=0;
-    printf(" Ingrese el numero de tiros: ");
+    printf(" Ingrese el Numero De Tiradas: ");
     scanf("%d",&tiros);
 
-    printf(" La Secuencia Es: ");
+    printf("La Secuencia Es: ");
     srand((unsigned) time(&t)); // Inicializada una sola vez
     for(int i=1;i<=tiros;i++){
         if (lanzada() == 0) {
@@ -48,7 +48,7 @@ int main()
 
 int lanzada() {
     int ale;
-        ale = rand()% 2; // ranfo entre 0 y (2-1)
+        ale = rand()% 2; // rango entre 0 y (2-1)
         ale = (ale == 0) ?  0 : 1; //Expresion Condicional
         return ale;
 }
