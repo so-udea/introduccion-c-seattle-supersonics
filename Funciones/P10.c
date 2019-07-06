@@ -19,7 +19,7 @@ Incorrecto. Trata una vez más.
 No te rindas!
 No. Trata de nuevo
 
-Nota: Mediante el generador de números aleatorios, seleccione un número entre 1 y 4 para desplegar un mensaje diferente
+Nota: Mediante el generador de números aleatorios, seleccione un número entre 1 y 4 para desplegar un mensaje diferente 
 para cada respuesta. Presente la respuesta mediante una estructura switch.
 */
 
