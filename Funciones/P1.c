@@ -9,14 +9,14 @@
 int main() {
 	int primero;
 	int segundo;
-	int multiplicidad;
+	int resultado;
 	printf("ingrese primer digito:");
 	scanf("%d", &primero);
 	printf("ingrese segundo digito:");
 	scanf("%d", &segundo);
-	multiplicidad = multiplo(primero, segundo);
+	resultado = multiplo(primero, segundo);
 
-	if (multiplicidad == 1) {
+	if (resultado == 1) {
 		printf("\n%d es multiplo de %d", segundo, primero);
 	} else {
 		printf("\n%d no es multiplo de %d", segundo, primero);
