@@ -23,7 +23,10 @@ int main () {
    int a, b, answer; //numeros multiplicandos
    int bandera = 0; 
    srand((unsigned) time(&t)); // Inicializada una sola vez
-
+   
+   printf("-------------Programa Para Enseñar a Multiplicar---------------\n");
+   printf("---------------------------------------------------------------\n");
+   
    //Empieza Programa
    do {
        
@@ -51,7 +54,8 @@ int main () {
            scanf("%d", &repeat);
        }
    } while(repeat == 0);
-   printf("Hasta Luego...");
+   printf("Hasta Luego...\n");
+   printf("---------------------------------------------------------------\n");
    return 0;
 }
 
@@ -65,4 +69,3 @@ int asignarNumero() {
     int numero = ((rand()% 9) + 1); // rango entre 1 y 9
     return numero;
 }
-
