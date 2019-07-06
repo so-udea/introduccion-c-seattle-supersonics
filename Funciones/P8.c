@@ -29,7 +29,7 @@ int main()
     printf(" Ingrese el numero de tiros: ");
     scanf("%d",&tiros);
 
-    printf(" La secuencia es : ");
+    printf(" La Secuencia Es: ");
     srand((unsigned) time(&t)); // Inicializada una sola vez
     for(int i=1;i<=tiros;i++){
         if (lanzada() == 0) {
